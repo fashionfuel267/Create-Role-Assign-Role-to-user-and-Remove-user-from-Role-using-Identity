@@ -1,0 +1,23 @@
+﻿@model MVCB03_C62_Roles.ViewModels.UserRoleVM
+@{
+    ViewBag.Title = "Remove user from role";
+}
+
+<h2>AssignUSerToRoll</h2>
+
+@using (@Html.BeginForm())
+{
+    <div>
+        <label>user</label>
+        @Html.HiddenFor(Model => Model.UserId)
+        @Html.DisplayFor(Model => Model.Username)
+    </div>
+    <div>
+        <label>Role</label>
+        @Html.DropDownList("Role", "Select RoleName")
+    </div>
+    <div>
+        <input type="submit" value="Save" />
+     
+    </div>
+}
